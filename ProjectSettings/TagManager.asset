@@ -7,6 +7,7 @@ TagManager:
   - ground
   - bomb_enemy
   - power_up
+  - pit
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - ground
   - Water
   - UI
-  - 
+  - pit
   - 
   - 
   - 
