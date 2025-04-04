@@ -700,8 +700,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00000047950107, y: 1.0223463}
-  m_Size: {x: 3.0926807, y: 3.0447142}
+  m_Offset: {x: 0.0040487247, y: 1.2303834}
+  m_Size: {x: 1.6744288, y: 1.4821563}
   m_Direction: 1
 --- !u!1 &965755388
 GameObject:
@@ -996,8 +996,9 @@ GameObject:
   - component: {fileID: 1209928904}
   - component: {fileID: 1209928908}
   - component: {fileID: 1209928909}
+  - component: {fileID: 1209928910}
   m_Layer: 0
-  m_Name: small_robot_0
+  m_Name: small_friend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1047,7 +1048,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2149580073897059337, guid: 530f06f716d951d469184b684bc42064, type: 3}
+  m_Sprite: {fileID: 1237030146, guid: 6bd1c00f5f6ecc746b6e2277f8a7d292, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1066,14 +1067,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209928900}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.55, y: -0.46, z: 1}
-  m_LocalScale: {x: -0.25, y: 0.25, z: 1}
+  m_LocalRotation: {x: -0.0036776399, y: -0.9999819, z: -0.0047673155, w: 0.00012529732}
+  m_LocalPosition: {x: -6.6374, y: -0.1215, z: 1.0037}
+  m_LocalScale: {x: -0.6235417, y: 0.7129472, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 826490760}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.546, y: -179.988, z: 0.421}
 --- !u!50 &1209928904
 Rigidbody2D:
   serializedVersion: 5
@@ -1135,6 +1136,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38756740336806144bf7ffbd574f6bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1209928910
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209928900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9af9201aca7a824389ac9b7dd8106a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1508597460
 GameObject:
   m_ObjectHideFlags: 0
