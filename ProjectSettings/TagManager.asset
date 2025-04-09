@@ -8,6 +8,8 @@ TagManager:
   - bomb_enemy
   - power_up
   - pit
+  - Coin
+  - Mace
   layers:
   - Default
   - TransparentFX

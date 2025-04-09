@@ -26,7 +26,18 @@ public class update_player : MonoBehaviour    //player_dead
         }
          */
         
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+            life_counter.instance.addPoints(); //Adds points to the counter once coin is collected
+        }
+
+        if (collision.gameObject.CompareTag("Mace"))
+        {
+            life_counter.instance.subLife(); //Deducts from the life counter once player comes into contact with "Mace"
+        }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

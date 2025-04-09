@@ -11,7 +11,7 @@ public class life_counter : MonoBehaviour    //score_manager
     
     public GameObject player;
     public TMP_Text life_text;
-    public int life = 3;
+    public int life = 5;
     
 
     private void Awake()
