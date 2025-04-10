@@ -10,7 +10,8 @@ public class life_counter : MonoBehaviour    //score_manager
     int score = 0;
     
     public GameObject player;
-    public TMP_Text life_text;
+    public GameObject heartPrefab;   // Reference to the heart prefab
+    public Transform heartsParent;   // The parent object where hearts will be instantiated
     public int life = 5;
     
 
@@ -19,10 +20,24 @@ public class life_counter : MonoBehaviour    //score_manager
         instance = this;
     }
     public void updateUI()
+    {
+        score_text.text = "Points: " + score.ToString();
+        updateHearts();
+    }
+    public void updateHearts()
+    {
+        // Clear previous hearts
+        foreach (Transform child in heartsParent)
         {
-            score_text.text = "Points: " + score.ToString();
-            life_text.text = "Lives: " + life.ToString();
+            Destroy(child.gameObject);
         }
+
+        // Add new hearts based on the current life
+        for (int i = 0; i < life; i++)
+        {
+            Instantiate(heartPrefab, heartsParent);  // Create a new heart in the parent container
+        }
+    }
 
     void Start()
     {
@@ -47,8 +62,7 @@ public class life_counter : MonoBehaviour    //score_manager
         updateUI();
         if (life <= 0)
         {
-            Destroy(player);  // Hides the player
-            // Alternatively: player.SetActive(false);
+            Destroy(player);
         }
     }
     

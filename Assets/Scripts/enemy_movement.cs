@@ -1,14 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class enemy_movement : MonoBehaviour
 {
-    public AnimationCurve myCurve;
+    public float moveSpeed = 2f;
+    public float moveDistance = 3f;
 
-    //Update is called once per frame
+    private Vector3 startPos;
+    private bool movingRight = true;
+
+
+    void Start()
+    {
+        startPos = transform.position;
+    }
+
+    
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, myCurve.Evaluate((Time.time % myCurve.length)), transform.position.z); //Creates a curve in whihc the gameObject follows its set path
+        float movement = moveSpeed * Time.deltaTime;
+
+        if (movingRight)
+        {
+            transform.Translate(Vector2.right * movement);
+
+            if (transform.position.x >= startPos.x + moveDistance)
+            {
+                movingRight = false;
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        else
+        {
+            transform.Translate(Vector2.left * movement);
+
+            if (transform.position.x <= startPos.x - moveDistance)
+            {
+                movingRight = true;
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
     }
 }
