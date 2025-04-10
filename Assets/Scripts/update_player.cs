@@ -16,10 +16,11 @@ public class update_player : MonoBehaviour    //player_dead
         {
             //Destroy(this.gameObject);     // Just destroys the robot instantly
             Destroy(collision.gameObject);
+            sound_manager.Instance.PlaySound3D("Bomb", transform.position); // Plays random sound effect from group of clips
             life_counter.instance.subLife();
         }
         /*
-         if (collision.gameObject.CompareTag("power_up"))
+        if (collision.gameObject.CompareTag("power_up"))
         {
             Destroy(collision.gameObject);
             score_manager.instance.addPoints();
@@ -29,11 +30,13 @@ public class update_player : MonoBehaviour    //player_dead
         if (collision.gameObject.CompareTag("Coin"))
         {
             Destroy(collision.gameObject);
+            sound_manager.Instance.PlaySound3D("Coin", transform.position);
             life_counter.instance.addPoints(); //Adds points to the counter once coin is collected
         }
 
         if (collision.gameObject.CompareTag("Mace"))
         {
+            sound_manager.Instance.PlaySound3D("Mace", transform.position);
             life_counter.instance.subLife(); //Deducts from the life counter once player comes into contact with "Mace"
         }
     }
@@ -43,6 +46,7 @@ public class update_player : MonoBehaviour    //player_dead
     {
         if (collision.gameObject.CompareTag("pit"))
         {
+            sound_manager.Instance.PlaySound3D("Fall", transform.position);
             life_counter.instance.subLife();
             Respawn();
         }

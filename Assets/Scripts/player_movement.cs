@@ -66,6 +66,7 @@ public class player_movement : MonoBehaviour
     void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        sound_manager.Instance.PlaySound3D("Jump", transform.position); // Plays random sound effect from group of clips
         animator.SetTrigger("Jump"); // Trigger jump animation
     }
 
@@ -73,6 +74,7 @@ public class player_movement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        sound_manager.Instance.PlaySound3D("Dash", transform.position);
         animator.SetTrigger("Dash"); // Trigger dash animation
 
         float originalSpeed = moveSpeed;
