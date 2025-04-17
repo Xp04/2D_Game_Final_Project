@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void Play() {
-        SceneManager.LoadScene("Game Progress Demo");
+        SceneManager.LoadScene("Intro Cutscene");
     }
 
     public void Quit() {

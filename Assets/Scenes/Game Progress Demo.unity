@@ -14671,15 +14671,15 @@ RectTransform:
   m_GameObject: {fileID: 1541160395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 125542937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -584, y: 237}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -636, y: 354}
+  m_SizeDelta: {x: 229.4474, y: 104.0028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541160397
 MonoBehaviour:
@@ -15120,9 +15120,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -533, y: -263.1}
-  m_SizeDelta: {x: 151.7032, y: 50}
-  m_Pivot: {x: 0.49999997, y: 0.5}
+  m_AnchoredPosition: {x: -339, y: -287}
+  m_SizeDelta: {x: 570.3019, y: 50}
+  m_Pivot: {x: 0.457374, y: 0.5}
 --- !u!114 &1999915246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15170,8 +15170,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 88
+  m_fontSizeBase: 88
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15208,7 +15208,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.000061035156, w: 0}
+  m_margin: {x: -212.38571, y: 61.9458, z: -88.8551, w: -137.16579}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15678,6 +15678,7 @@ SceneRoots:
   - {fileID: 1086307645}
   - {fileID: 322729790}
   - {fileID: 1900049384}
+  - {fileID: 2054341942}
   - {fileID: 3007043307381984742}
   - {fileID: 1015980566}
   - {fileID: 2138028815}
@@ -15687,4 +15688,3 @@ SceneRoots:
   - {fileID: 2057176005}
   - {fileID: 1389575058}
   - {fileID: 1649155332}
-  - {fileID: 2054341942}
