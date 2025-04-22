@@ -15,10 +15,12 @@ public class update_player : MonoBehaviour    //player_dead
         if (collision.gameObject.CompareTag("bomb_enemy"))
         {
             //Destroy(this.gameObject);     // Just destroys the robot instantly
+            Debug.Log("touched bomb");
             Destroy(collision.gameObject);
             sound_manager.Instance.PlaySound3D("Bomb", transform.position); // Plays random sound effect from group of clips
             life_counter.instance.subLife();
         }
+
         /*
         if (collision.gameObject.CompareTag("power_up"))
         {
@@ -49,6 +51,16 @@ public class update_player : MonoBehaviour    //player_dead
             sound_manager.Instance.PlaySound3D("Fall", transform.position);
             life_counter.instance.subLife();
             Respawn();
+        }
+
+        if (collision.gameObject.CompareTag("DialogueTrigger"))
+        {  
+            dialogue_trigger trigger = collision.gameObject.GetComponent<dialogue_trigger>();
+
+            if (trigger != null)
+            {
+                trigger.TriggerDialogue();
+            }
         }
     }
 

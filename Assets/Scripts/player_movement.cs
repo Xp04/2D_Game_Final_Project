@@ -37,6 +37,16 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
+        // block all player movement, even animations, if dialogue is active
+        if (dialogue_manager.Instance.IsDialogueActive())
+        {
+            moveInput = 0;
+            animator.SetFloat("Speed", 0);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("IsGrounded", true);
+            return;
+        }
+        
         moveInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(moveInput)); // Update speed animation
 
@@ -60,7 +70,17 @@ public class player_movement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         animator.SetBool("IsGrounded", isGrounded); // Update grounded state animation
         animator.SetBool("isJumping", !isGrounded); // Set Jump to true when not grounded
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        // Only update velocity if dialogue is not active
+        if (!dialogue_manager.Instance.IsDialogueActive())
+        {
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        }
+        else
+        {
+            // Stop horizontal movement when dialogue is active
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
     }
 
     void Jump()
