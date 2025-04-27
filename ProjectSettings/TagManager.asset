@@ -12,6 +12,7 @@ TagManager:
   - Mace
   - Dialogue
   - DialogueTrigger
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
