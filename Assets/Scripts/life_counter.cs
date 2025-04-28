@@ -22,7 +22,7 @@ public class life_counter : MonoBehaviour    //score_manager
     }
     public void updateUI()
     {
-        score_text.text = "Points: " + score.ToString();
+        score_text.text = score.ToString();
         updateHearts();
     }
     public void updateHearts()
