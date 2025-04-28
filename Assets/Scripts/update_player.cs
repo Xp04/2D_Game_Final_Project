@@ -10,6 +10,10 @@ public class update_player : MonoBehaviour    //player_dead
     // used to show/hide the checkpoint box
     public GameObject box;
 
+    // used to show win screen
+    public GameObject player;
+    public win_lose_screens winScreen;
+
     private void Start()
     {
         startPosition = transform.position;
@@ -80,6 +84,11 @@ public class update_player : MonoBehaviour    //player_dead
                 trigger.TriggerDialogue();
             }
         }
+
+        if (collision.gameObject.CompareTag("End"))
+        {
+            winScreen.ShowWinScreen();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -95,5 +104,4 @@ public class update_player : MonoBehaviour    //player_dead
         transform.position = lastCheckpointPosition;
         GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
-        
 }

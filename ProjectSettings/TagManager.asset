@@ -13,6 +13,7 @@ TagManager:
   - Dialogue
   - DialogueTrigger
   - Checkpoint
+  - End
   layers:
   - Default
   - TransparentFX

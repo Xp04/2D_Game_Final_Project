@@ -12,6 +12,7 @@ public class life_counter : MonoBehaviour    //score_manager
     public GameObject player;
     public GameObject heartPrefab;   // Reference to the heart prefab
     public Transform heartsParent;   // The parent object where hearts will be instantiated
+    public win_lose_screens loseScreen;
     public int life = 5;
     
 
@@ -62,6 +63,7 @@ public class life_counter : MonoBehaviour    //score_manager
         updateUI();
         if (life <= 0)
         {
+            loseScreen.ShowLoseScreen();
             Destroy(player);
         }
     }

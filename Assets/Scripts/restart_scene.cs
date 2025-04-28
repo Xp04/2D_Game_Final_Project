@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class restart_scene : MonoBehaviour { 
     void Update() 
-    { if (Input.GetKey("r")) 
-        { 
-            Restart(); 
-        } 
+    { 
+        // if (Input.GetKey("r")) 
+        // { 
+        //     Restart(); 
+        // } 
     } 
     
     void Restart() 
