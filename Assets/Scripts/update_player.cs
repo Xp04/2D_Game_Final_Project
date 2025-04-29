@@ -34,7 +34,7 @@ public class update_player : MonoBehaviour    //player_dead
         if (collision.gameObject.CompareTag("power_up"))
         {
             Destroy(collision.gameObject);
-            sound_manager.Instance.PlaySound3D("Life", transform.position);
+            sound_manager.Instance.PlaySound3D("Coin", transform.position);
             life_counter.instance.addLife();
         }
         
@@ -71,7 +71,7 @@ public class update_player : MonoBehaviour    //player_dead
                 box.SetActive(true); // show checkpoint box
                 checkpoint.activated = true;
                 lastCheckpointPosition = collision.transform.position;
-                sound_manager.Instance.PlaySound3D("Checkpoint", transform.position);
+                sound_manager.Instance.PlaySound3D("Coin", transform.position);
             }
         }
 

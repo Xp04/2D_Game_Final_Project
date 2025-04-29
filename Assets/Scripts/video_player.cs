@@ -15,6 +15,13 @@ public class video_player : MonoBehaviour
         myVideoPlayer.loopPointReached += endOfVideo;
     }
 
+    // Function to skip the video
+    public void SkipVideo()
+    {
+        myVideoPlayer.Stop();
+        SceneManager.LoadScene("Game Progress Demo");
+    }
+
     // once video ends, we want to load the scene of the actual game
     void endOfVideo(VideoPlayer vp)
     {
